@@ -5,14 +5,13 @@ namespace Player.Models
 {
     public class PlayerEntity
     {
-
         public PlayerEntity(PlayerEntityView playerEntityView)
         {
             View = playerEntityView;
         }
 
+        public PlayerInventoryModel Inventory { get; } = new();
         public PlayerEntityView View { get; }
-
-        public Transform Transform => View.Transform;
+        
     }
 }

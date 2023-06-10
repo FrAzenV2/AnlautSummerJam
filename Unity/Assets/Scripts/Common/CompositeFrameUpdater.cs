@@ -11,13 +11,10 @@ namespace Common
             _updaters = updaters;
 
         }
-        
+
         public void Update()
         {
-            foreach (var updater in _updaters)
-            {
-                updater.Update();
-            }
+            foreach (var updater in _updaters) updater.Update();
         }
     }
 }

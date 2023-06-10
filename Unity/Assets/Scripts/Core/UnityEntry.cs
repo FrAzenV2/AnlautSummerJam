@@ -1,31 +1,33 @@
-using System;
-using Core;
-using Player;
+using Player.Models;
+using Player.Views;
 using UnityEngine;
 
-public class UnityEntry : MonoBehaviour
+namespace Core
 {
-    [SerializeField] private GameContent _gameContent;
-    [SerializeField] private PlayerEntityView _playerEntityView;
-    private GameUpdater _gameUpdater;
-    
-    void Start()
+    public class UnityEntry : MonoBehaviour
     {
-        _gameUpdater = new GameUpdater(InitPlayer(), _gameContent);
-    }
+        [SerializeField] private GameContent _gameContent;
+        [SerializeField] private PlayerEntityView _playerEntityView;
+        private GameUpdater _gameUpdater;
 
-    private PlayerEntity InitPlayer()
-    {
-        return new PlayerEntity(_playerEntityView);
-    }
+        private void Start()
+        {
+            _gameUpdater = new GameUpdater(InitPlayer(), _gameContent);
+        }
 
-    private void Update()
-    {
-        _gameUpdater.Update();
-    }
+        private void Update()
+        {
+            _gameUpdater.Update();
+        }
 
-    private void FixedUpdate()
-    {
-        _gameUpdater.FixedUpdate();
+        private void FixedUpdate()
+        {
+            _gameUpdater.FixedUpdate();
+        }
+
+        private PlayerEntity InitPlayer()
+        {
+            return new PlayerEntity(_playerEntityView);
+        }
     }
 }

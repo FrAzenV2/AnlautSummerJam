@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Player
+namespace Player.Views
 {
     public class PlayerEntityView : MonoBehaviour
     {
@@ -10,6 +10,5 @@ namespace Player
         {
             Transform = transform;
         }
-
     }
 }

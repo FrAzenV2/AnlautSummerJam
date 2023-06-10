@@ -13,10 +13,7 @@ namespace Common
         }
         public void FixedUpdate()
         {
-            foreach (var fixedUpdater in _fixedUpdaters)
-            {
-                fixedUpdater.FixedUpdate();
-            }
+            foreach (var fixedUpdater in _fixedUpdaters) fixedUpdater.FixedUpdate();
         }
     }
 }

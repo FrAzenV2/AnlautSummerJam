@@ -4,6 +4,6 @@ namespace Core
 {
     public class GameData
     {
-        public PlayerMovementInput PlayerMovementInput = new();
+        public readonly PlayerMovementInput PlayerMovementInput = new();
     }
 }

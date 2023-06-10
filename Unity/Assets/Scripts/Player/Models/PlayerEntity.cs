@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Player.Views;
+using UnityEngine;
 
-namespace Player
+namespace Player.Models
 {
     public class PlayerEntity
     {
@@ -9,9 +10,9 @@ namespace Player
         {
             View = playerEntityView;
         }
-        
+
         public PlayerEntityView View { get; }
-        
+
         public Transform Transform => View.Transform;
     }
 }

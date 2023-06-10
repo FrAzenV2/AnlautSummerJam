@@ -1,4 +1,5 @@
-﻿using Player.Configs;
+﻿using Items;
+using Player.Configs;
 using UnityEngine;
 
 namespace Core
@@ -7,5 +8,6 @@ namespace Core
     public class GameContent : ScriptableObject
     {
         [field: SerializeField] public PlayerMovementConfig PlayerMovementConfig { get; private set; }
+        [field: SerializeField] public ItemViewDescriptions ItemViewDescriptions { get; private set; }
     }
 }

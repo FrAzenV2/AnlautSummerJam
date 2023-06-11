@@ -9,9 +9,9 @@ namespace Core
         private readonly GameData _gameData;
         private readonly PlayerEntityUpdater _playerEntityUpdater;
 
-        public GameUpdater(PlayerEntity playerEntity, GameContent gameContent)
+        public GameUpdater(PlayerEntity playerEntity, GameContent gameContent, LocationInteractables locationInteractables)
         {
-            _gameData = new GameData();
+            _gameData = new GameData(locationInteractables);
             _playerEntityUpdater = new PlayerEntityUpdater(playerEntity, _gameData, gameContent);
         }
 
